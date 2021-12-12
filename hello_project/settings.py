@@ -27,6 +27,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ROOT="/var/www/code/"
+# STATIC
+# ------------------------------------------------------------------------------
+STATIC_ROOT = str(ROOT + "staticfiles")
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [str("static")]
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
+
 
 # Application definition
 
